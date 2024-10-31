@@ -18,9 +18,15 @@ class MainPage(BasePage):
     def click_button_personal_account(self):
         self.click_element(MainPageLocators.BUTTON_PERSONAL_ACCOUNT)
 
-    @allure.step('Закрываем окно ингредиента')
-    def close_window_igredient(self):
-        self.click_element(MainPageLocators.CROSS_WINDOW_IGREDIENT)
+    @allure.step('Перетаскивание булок')
+    def drag_and_drop_buns(self):
+        self.driver.implicitly_wait(3)
+        self.drag_and_drop_elemen(MainPageLocators.FLYOR_BUN, MainPageLocators.DROP_LOCATOR_UP)
+
+    @allure.title('Перетаскивание соуса')
+    def drag_and_drop_souse(self):
+        self.driver.implicitly_wait(3)
+        self.drag_and_drop_elemen(MainPageLocators.SOUS_SPICY, MainPageLocators.DROP_LOCATOR_UP)
 
     @allure.step('Получение счётчика ингредиента')
     def get_counter_ingredient(self):

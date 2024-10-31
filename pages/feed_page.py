@@ -19,12 +19,16 @@ class FeedPage(BasePage):
     def click_order(self):
         self.click_element(FeedLocators.ORDER)
 
-    @allure.step('Получение количества счётчика "Выполнено за всё время"')
+    @allure.title('Получение заказа в листе заказов')
+    def search_order_feed_list(self):
+        return self.get_text(FeedLocators.ORDER_FEED)
+
+    @allure.step('Получение количество счётчика Выполнено за всё время')
     def get_text_order_all_time(self):
         result = self.get_text(FeedLocators.SUCCESSFULLY_ALL_TIME)
         return result
 
-    @allure.step('Получение количества счётчика "Выполнено за сегодня"')
+    @allure.step('Получение количество счётчика Выполнено за сегодня')
     def get_text_order_today_time(self):
         result = self.get_text(FeedLocators.SUCCESSFULLY_TODAY_TIME)
         return result

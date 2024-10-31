@@ -2,6 +2,8 @@ import allure
 from locators.main_page_locators import MainPageLocators
 from locators.personal_account_page_locators import PersonalAccountPageLocators
 from locators.input_page_locators import InputPageLocators
+
+
 class TestPersonalAccount:
 
     @allure.title('Преход по клику на "Личный кабинет"')
