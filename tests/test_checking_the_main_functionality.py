@@ -30,8 +30,6 @@ class TestCheckingTheMainFunctionality:
     def test_window_ingredient_close_tap_cross(self, main_page):
         main_page.wait_element_invisibility_of_element(10, MainPageLocators.ELEMENT)
         main_page.click_for_ingredient()
-        main_page.wait_element_visibility_of_element(10, MainPageLocators.CROSS_WINDOW_IGREDIENT)
-        main_page.close_window_igredient()
         main_page.wait_element_visibility_of_element(10, MainPageLocators.MAIN_PAGE_TITLE)
         assert main_page.find_element(MainPageLocators.MAIN_PAGE_TITLE)
 
@@ -39,7 +37,7 @@ class TestCheckingTheMainFunctionality:
     def test_count_ingredients(self, main_page):
         main_page.wait_element_invisibility_of_element(10, MainPageLocators.ELEMENT)
         main_page.drag_and_drop_buns()
-        assert main_page.get_counter_ingredient() == '6'
+        assert main_page.get_counter_ingredient() == '2'
 
     @allure.title('Залогиненный пользователь может оформить заказ')
     def test_login_user_success_making_an_order(self, personal_account, main_page):

@@ -20,8 +20,9 @@ class TestPersonalAccount:
         main_page.click_button_personal_account()
         personal_account_page.wait_element_invisibility_of_element(10, MainPageLocators.ELEMENT)
         personal_account_page.transition_to_history_order()
-        (personal_account_page.wait_element_visibility_of_element
-         (10, PersonalAccountPageLocators.BUTTON_HISTORY_ORDERS_ACTIVE))
+        personal_account_page.wait_element_visibility_of_element(10,
+                                                                 PersonalAccountPageLocators.
+                                                                 BUTTON_HISTORY_ORDERS_ACTIVE)
         assert personal_account_page.find_element(PersonalAccountPageLocators.BUTTON_HISTORY_ORDERS_ACTIVE)
 
     @allure.title('Выход из аккаунта')

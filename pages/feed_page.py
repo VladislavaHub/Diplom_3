@@ -11,11 +11,11 @@ class FeedPage(BasePage):
         self.open_url(f'{urls.BASE_PAGE}{urls.ENDPOINT_ORDER_FEED}')
         self.wait_element_visibility_of_element(10, FeedLocators.ORDER_FEED_TITLE)
 
-    @allure.step('Клик на кнопку "Конструктор"')
+    @allure.step('Нажимаем на кнопку "Конструктор"')
     def click_button_designer(self):
         self.click_element(MainPageLocators.BUTTON_DESIGNER)
 
-    @allure.step('Клик на заказ')
+    @allure.step('Нажимаем на заказ')
     def click_order(self):
         self.click_element(FeedLocators.ORDER)
 

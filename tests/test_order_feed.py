@@ -4,6 +4,7 @@ from locators.main_page_locators import MainPageLocators
 
 
 class TestOrdersFeed:
+
     @allure.title('Если кликнуть на заказ, откроется всплывающее окно с деталями')
     def test_opening_an_order_window_with_details(self, main_page, order_feed_page):
         order_feed_page.open_url_order_feed()

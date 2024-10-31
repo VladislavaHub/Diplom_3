@@ -6,17 +6,21 @@ from pages.base_page import BasePage
 
 class MainPage(BasePage):
 
-    @allure.step('Клик на кнопку "Лента заказов"')
+    @allure.step('Нажимаем на кнопку "Лента заказов"')
     def click_button_order_feed(self):
         self.click_element(MainPageLocators.BUTTON_ORDER_FEED)
 
-    @allure.step('Клик на ингредиент')
+    @allure.step('Нажимаем на ингредиент')
     def click_for_ingredient(self):
         self.click_element(MainPageLocators.FLYOR_BUN)
 
-    @allure.step('Клик на кнопку "Личный кабинет"')
+    @allure.step('Нажимаем на кнопку "Личный кабинет"')
     def click_button_personal_account(self):
         self.click_element(MainPageLocators.BUTTON_PERSONAL_ACCOUNT)
+
+    @allure.step('Закрываем окно ингредиента')
+    def close_window_igredient(self):
+        self.click_element(MainPageLocators.CROSS_WINDOW_IGREDIENT)
 
     @allure.step('Перетаскивание булок')
     def drag_and_drop_buns(self):
